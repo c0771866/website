@@ -1,4 +1,4 @@
-The public/ directory contains all the publicly accessible files, including the HTML files for the site, the CSS and JavaScript files, and the images.
+The src/ directory contains all the publicly accessible source code files, including the HTML files for the site, the CSS and JavaScript files, and the images.
 
 The config/ directory contains configuration files for the database and authentication.
 
@@ -18,5 +18,4 @@ The package.json file contains information about the application dependencies an
 
 ##  DockerFile
 This Dockerfile assumes that your application code is in the same directory as the Dockerfile. It installs Node.js and MongoDB, sets up the MongoDB data 
-
 directory, and exposes the ports for the web server and MongoDB. The CMD directive at the end starts MongoDB in the background and then starts the web server.
