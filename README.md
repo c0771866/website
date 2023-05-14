@@ -46,7 +46,7 @@ This Dockerfile assumes that your application code is in the same directory as t
 # JenkinsFile
 Groovy pipeline script that automates the deployment of the website using Jenkins, the Dockerfile, and the Terraform plugin into a webserver
 
-## project/
+# project/
 ├── public/
 │   ├── index.html
 │   ├── news.html  (
