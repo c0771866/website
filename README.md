@@ -46,40 +46,6 @@ This Dockerfile assumes that your application code is in the same directory as t
 # JenkinsFile
 Groovy pipeline script that automates the deployment of the website using Jenkins, the Dockerfile, and the Terraform plugin into a webserver
 
-# project/
-├── public/
-│   ├── index.html
-│   ├── news.html  (
-│   ├── people.html
-│   ├── css/
-│   ├── js/
-│   └── img/
-├── config/  (The config/ directory contains configuration files for the database and authentication)
-│   ├── db.js
-│   └── auth.js
-├── routes/  (The routes/ directory contains the routing logic for the different pages, including the news and people sections, the custom error page)
-│   ├── index.js
-│   ├── news.js
-│   ├── people.js
-│   └── error.js
-├── models/  (he models/ directory contains the database schema for the articles and users, as well as the error handling schema)
-│   ├── article.js
-│   ├── user.js
-│   └── error.js
-├── views/
-│   ├── index.ejs
-│   ├── news.ejs
-│   ├── people.ejs
-│   └── error.ejs
-├── controllers/  (The controllers/ directory contains the logic for handling user requests, including adding and editing articles, and handling errors.)
-│   ├── articleController.js
-│   ├── userController.js
-│   └── errorController.js
-├── middleware/  (The middleware/ directory contains the authentication middleware to restrict access to the news section.)
-│   └── authMiddleware.js
-├── app.js  (The app.js file is the main entry point for the application and sets up the server and middleware)
-└── package.json  (he package.json file contains information about the application dependencies and scripts)
-
 
 
 
