@@ -15,3 +15,8 @@ The middleware/ directory contains the authentication middleware to restrict acc
 The app.js file is the main entry point for the application and sets up the server and middleware.
 
 The package.json file contains information about the application dependencies and scripts.
+
+##  DockerFile
+This Dockerfile assumes that your application code is in the same directory as the Dockerfile. It installs Node.js and MongoDB, sets up the MongoDB data 
+
+directory, and exposes the ports for the web server and MongoDB. The CMD directive at the end starts MongoDB in the background and then starts the web server.
