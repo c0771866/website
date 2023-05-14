@@ -17,7 +17,7 @@ views: This directory contains the EJS templates that will be used to generate H
 
 routes: This directory contains the Express.js route handlers that will handle incoming HTTP requests.
 
-models: This directory contains the Mongoose models that define the data schema for the MongoDB database.
+models: This directory contains the Mongo models that define the data schema for the MongoDB database.
 
 controllers: This directory contains the functions that implement the business logic of the application.
 
