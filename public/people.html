@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>People</title>
+</head>
+<body>
+	<h1>People Section</h1>
+	<p>Only Charlie from HR can update this section.</p>
+	<form action="/update_people" method="POST">
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" required><br><br>
+		<label for="job_title">Job Title:</label>
+		<input type="text" id="job_title" name="job_title" required><br><br>
+		<label for="bio">Bio:</label><br>
+		<textarea id="bio" name="bio" required></textarea><br><br>
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
+

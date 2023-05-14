@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>News</title>
+</head>
+<body>
+	<h1>News Section</h1>
+	<p>Only marketing users Alice and Malory can add to this section.</p>
+	<form action="/add_news" method="POST">
+		<label for="title">Title:</label>
+		<input type="text" id="title" name="title" required><br><br>
+		<label for="content">Content:</label><br>
+		<textarea id="content" name="content" required></textarea><br><br>
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
+
