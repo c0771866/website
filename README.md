@@ -31,6 +31,15 @@ package.json: This file contains metadata about the application and its dependen
 
 README.md: This file contains information about the project and how to set it up.
 
+# Why choose a mongo db
+Flexible data model: MongoDB is a document-based database, which means that it can handle data in a more flexible and dynamic way than traditional relational databases. This makes it easier to store and retrieve data for applications with complex or changing data structures.
+
+Mongo is highly scalable and effective for handling spikes in user traffic
+
+Performance: MongoDB is optimized for fast read and write operations, which can improve the performance of applications that need to access data frequently.
+
+Easy integration with nodejs. Mongo is also open source with good vendor support
+
 
 
 
