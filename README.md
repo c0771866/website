@@ -11,7 +11,7 @@ section
 - Automation of testing & deployment of infrastructure.
 
 # Project Directory
-public: This directory contains the static assets (images, stylesheets, scripts, etc.) that will be served to the public.
+src: This directory contains the static assets (images, stylesheets, scripts, etc.) that will be served to the public.
 
 views: This directory contains the EJS templates that will be used to generate HTML pages dynamically.
 
