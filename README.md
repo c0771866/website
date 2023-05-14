@@ -40,6 +40,47 @@ Performance: MongoDB is optimized for fast read and write operations, which can 
 
 Easy integration with nodejs. Mongo is also open source with good vendor support
 
+# DockerFile
+This Dockerfile assumes that your application code is in the same directory as the Dockerfile. It installs Node.js and MongoDB, sets up the MongoDB data directory, and exposes the ports for the web server and MongoDB. The CMD directive at the end starts MongoDB in the background and then starts the web server.
+
+# JenkinsFile
+Groovy pipeline script that automates the deployment of the website using Jenkins, the Dockerfile, and the Terraform plugin into a webserver
+
+## project/
+├── public/
+│   ├── index.html
+│   ├── news.html  (
+│   ├── people.html
+│   ├── css/
+│   ├── js/
+│   └── img/
+├── config/  (The config/ directory contains configuration files for the database and authentication)
+│   ├── db.js
+│   └── auth.js
+├── routes/  (The routes/ directory contains the routing logic for the different pages, including the news and people sections, the custom error page)
+│   ├── index.js
+│   ├── news.js
+│   ├── people.js
+│   └── error.js
+├── models/  (he models/ directory contains the database schema for the articles and users, as well as the error handling schema)
+│   ├── article.js
+│   ├── user.js
+│   └── error.js
+├── views/
+│   ├── index.ejs
+│   ├── news.ejs
+│   ├── people.ejs
+│   └── error.ejs
+├── controllers/  (The controllers/ directory contains the logic for handling user requests, including adding and editing articles, and handling errors.)
+│   ├── articleController.js
+│   ├── userController.js
+│   └── errorController.js
+├── middleware/  (The middleware/ directory contains the authentication middleware to restrict access to the news section.)
+│   └── authMiddleware.js
+├── app.js  (The app.js file is the main entry point for the application and sets up the server and middleware)
+└── package.json  (he package.json file contains information about the application dependencies and scripts)
+
+
 
 
 
