@@ -16,6 +16,13 @@ pipeline {
       }
     }
     
+    stage('Build Artifact') {
+      steps {
+        sh 'npm install'
+        sh 'npm run build'
+      }
+    }
+    
     stage('Terraform Init') {
       steps {
         terraformInit(
@@ -59,11 +66,26 @@ pipeline {
       }
     }
     
+    stage('Build Docker Image') {
+      steps {
+        script {
+          def dockerImage = docker.build("my-image:${env.BUILD_ID}")
+          docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-credentials') {
+            dockerImage.push()
+          }
+        }
+      }
+    }
+    
     stage('Deploy') {
       steps {
-        sh 'npm install'
-        sh 'npm run build'
-        sh 'aws s3 sync dist/ s3://my-bucket/'
+        sshagent(['ssh-credentials']) {
+          sh '''
+          ssh user@webserver "docker pull my-image:${env.BUILD_ID}"
+          ssh user@webserver "docker stop webapp || true && docker rm webapp || true"
+          ssh user@webserver "docker run -d --name webapp -p 80:80 my-image:${env.BUILD_ID}"
+          '''
+        }
       }
     }
   }
